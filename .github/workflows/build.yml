@@ -19,21 +19,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-2022]
+        # os: [ubuntu-latest, macos-latest, windows-2022]
+        os: [macos-10.15]
         include:
-          - os: 'ubuntu-latest'
-            mono: 'mono'
-            triplet: 'x64-linux'
-            artifact: 'x86_64-linux'
-            exe_ext: ''
-            build_dir: ninja-vcpkg
-          - os: 'windows-2022'
-            mono: ''
-            triplet: 'x64-win'
-            artifact: 'x86_64-windows'
-            exe_ext: '.exe'
-            build_dir: vs-vcpkg
-          - os: 'macos-latest'
+          # - os: 'ubuntu-latest'
+          #   mono: 'mono'
+          #   triplet: 'x64-linux'
+          #   artifact: 'x86_64-linux'
+          #   exe_ext: ''
+          #   build_dir: ninja-vcpkg
+          # - os: 'windows-2022'
+          #   mono: ''
+          #   triplet: 'x64-win'
+          #   artifact: 'x86_64-windows'
+          #   exe_ext: '.exe'
+          #   build_dir: vs-vcpkg
+          - os: 'macos-10.15'
+          #  os: 'macos-latest'
             mono: 'mono'
             triplet: 'x64-osx'
             artifact: 'x86_64-macos'
